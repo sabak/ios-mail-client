@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  InternMail
 //
-//  Created by Saba on 12/13/16.
+//  Created by Saba on 12/11/16.
 //  Copyright © 2016 Saba. All rights reserved.
 //
 
@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginButtonClicked(_ sender: UIButton) {
+        UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tab_bar")
+    }
 
 }
 

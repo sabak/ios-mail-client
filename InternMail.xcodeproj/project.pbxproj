@@ -14,6 +14,13 @@
 		165E192A1E0017AB00B744D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165E19281E0017AB00B744D4 /* LaunchScreen.storyboard */; };
 		165E19351E0017AC00B744D4 /* InternMailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E19341E0017AC00B744D4 /* InternMailTests.swift */; };
 		165E19401E0017AC00B744D4 /* InternMailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E193F1E0017AC00B744D4 /* InternMailUITests.swift */; };
+		165E19501E0017DD00B744D4 /* IMMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E194E1E0017DD00B744D4 /* IMMail.swift */; };
+		165E19511E0017DD00B744D4 /* IMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E194F1E0017DD00B744D4 /* IMUser.swift */; };
+		16D0B93A1E126A92000159D2 /* IMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0B9391E126A92000159D2 /* IMResponse.swift */; };
+		16D0B93C1E126B4B000159D2 /* IMBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0B93B1E126B4B000159D2 /* IMBaseModel.swift */; };
+		16D0B93E1E126BDF000159D2 /* Base Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0B93D1E126BDF000159D2 /* Base Service.swift */; };
+		16D0B9401E126C1E000159D2 /* User Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D0B93F1E126C1E000159D2 /* User Service.swift */; };
+		E4520422ED6D90C0BA8BE2FC /* Pods_InternMail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F9A97C5DDEA58F59F4B33 /* Pods_InternMail.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,15 @@
 		165E193B1E0017AC00B744D4 /* InternMailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternMailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		165E193F1E0017AC00B744D4 /* InternMailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternMailUITests.swift; sourceTree = "<group>"; };
 		165E19411E0017AC00B744D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		165E194E1E0017DD00B744D4 /* IMMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMMail.swift; path = Model/IMMail.swift; sourceTree = "<group>"; };
+		165E194F1E0017DD00B744D4 /* IMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMUser.swift; path = Model/IMUser.swift; sourceTree = "<group>"; };
+		16D0B9391E126A92000159D2 /* IMResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMResponse.swift; path = Model/IMResponse.swift; sourceTree = "<group>"; };
+		16D0B93B1E126B4B000159D2 /* IMBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMBaseModel.swift; path = Model/IMBaseModel.swift; sourceTree = "<group>"; };
+		16D0B93D1E126BDF000159D2 /* Base Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Base Service.swift"; path = "Service/Base Service.swift"; sourceTree = "<group>"; };
+		16D0B93F1E126C1E000159D2 /* User Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User Service.swift"; sourceTree = "<group>"; };
+		272F9A97C5DDEA58F59F4B33 /* Pods_InternMail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternMail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3800A41557C294219EC75AD0 /* Pods-InternMail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternMail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InternMail/Pods-InternMail.debug.xcconfig"; sourceTree = "<group>"; };
+		A12907E90837803BD03A8ED7 /* Pods-InternMail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternMail.release.xcconfig"; path = "Pods/Target Support Files/Pods-InternMail/Pods-InternMail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4520422ED6D90C0BA8BE2FC /* Pods_InternMail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15281A093CB0E32914E6F6C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				272F9A97C5DDEA58F59F4B33 /* Pods_InternMail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		165E19131E0017AB00B744D4 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				165E19331E0017AC00B744D4 /* InternMailTests */,
 				165E193E1E0017AC00B744D4 /* InternMailUITests */,
 				165E191D1E0017AB00B744D4 /* Products */,
+				AD7BDD0322634BBAB8D34544 /* Pods */,
+				15281A093CB0E32914E6F6C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +124,10 @@
 		165E191E1E0017AB00B744D4 /* InternMail */ = {
 			isa = PBXGroup;
 			children = (
-				165E191F1E0017AB00B744D4 /* AppDelegate.swift */,
+				165E194D1E0017CE00B744D4 /* Model */,
+				165E19581E0027F700B744D4 /* Service */,
 				165E19211E0017AB00B744D4 /* ViewController.swift */,
+				165E191F1E0017AB00B744D4 /* AppDelegate.swift */,
 				165E19231E0017AB00B744D4 /* Main.storyboard */,
 				165E19261E0017AB00B744D4 /* Assets.xcassets */,
 				165E19281E0017AB00B744D4 /* LaunchScreen.storyboard */,
@@ -125,6 +154,35 @@
 			path = InternMailUITests;
 			sourceTree = "<group>";
 		};
+		165E194D1E0017CE00B744D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16D0B9391E126A92000159D2 /* IMResponse.swift */,
+				165E194E1E0017DD00B744D4 /* IMMail.swift */,
+				165E194F1E0017DD00B744D4 /* IMUser.swift */,
+				16D0B93B1E126B4B000159D2 /* IMBaseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		165E19581E0027F700B744D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16D0B93D1E126BDF000159D2 /* Base Service.swift */,
+				16D0B93F1E126C1E000159D2 /* User Service.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		AD7BDD0322634BBAB8D34544 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3800A41557C294219EC75AD0 /* Pods-InternMail.debug.xcconfig */,
+				A12907E90837803BD03A8ED7 /* Pods-InternMail.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 165E19441E0017AC00B744D4 /* Build configuration list for PBXNativeTarget "InternMail" */;
 			buildPhases = (
+				5C9BF2A393EB3146D103F66E /* [CP] Check Pods Manifest.lock */,
 				165E19181E0017AB00B744D4 /* Sources */,
 				165E19191E0017AB00B744D4 /* Frameworks */,
 				165E191A1E0017AB00B744D4 /* Resources */,
+				0C0B5D81C7C38823785B652E /* [CP] Embed Pods Frameworks */,
+				EB04A0C896682F00633F3B05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +254,6 @@
 				TargetAttributes = {
 					165E191B1E0017AB00B744D4 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = S87EN3C54C;
 						ProvisioningStyle = Automatic;
 					};
 					165E192F1E0017AC00B744D4 = {
@@ -257,13 +317,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C0B5D81C7C38823785B652E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternMail/Pods-InternMail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C9BF2A393EB3146D103F66E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB04A0C896682F00633F3B05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InternMail/Pods-InternMail-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		165E19181E0017AB00B744D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D0B93A1E126A92000159D2 /* IMResponse.swift in Sources */,
+				16D0B93E1E126BDF000159D2 /* Base Service.swift in Sources */,
 				165E19221E0017AB00B744D4 /* ViewController.swift in Sources */,
+				16D0B93C1E126B4B000159D2 /* IMBaseModel.swift in Sources */,
 				165E19201E0017AB00B744D4 /* AppDelegate.swift in Sources */,
+				16D0B9401E126C1E000159D2 /* User Service.swift in Sources */,
+				165E19511E0017DD00B744D4 /* IMUser.swift in Sources */,
+				165E19501E0017DD00B744D4 /* IMMail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +527,13 @@
 		};
 		165E19451E0017AC00B744D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3800A41557C294219EC75AD0 /* Pods-InternMail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S87EN3C54C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InternMail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = intern.InternMail;
+				PRODUCT_BUNDLE_IDENTIFIER = ge.bog.intern.InternMail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,12 +541,13 @@
 		};
 		165E19461E0017AC00B744D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A12907E90837803BD03A8ED7 /* Pods-InternMail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S87EN3C54C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InternMail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = intern.InternMail;
+				PRODUCT_BUNDLE_IDENTIFIER = ge.bog.intern.InternMail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -514,6 +630,7 @@
 				165E19461E0017AC00B744D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		165E19471E0017AC00B744D4 /* Build configuration list for PBXNativeTarget "InternMailTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +639,7 @@
 				165E19491E0017AC00B744D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		165E194A1E0017AC00B744D4 /* Build configuration list for PBXNativeTarget "InternMailUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +648,7 @@
 				165E194C1E0017AC00B744D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
