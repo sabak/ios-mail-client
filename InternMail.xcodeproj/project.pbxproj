@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163C62121E128276005299E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C62111E128276005299E2 /* DetailViewController.swift */; };
+		163C62141E1283D3005299E2 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C62131E1283D3005299E2 /* InboxTableViewController.swift */; };
+		163C62161E1283F8005299E2 /* SentboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C62151E1283F8005299E2 /* SentboxTableViewController.swift */; };
+		163C62181E1284F6005299E2 /* ComposeMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C62171E1284F6005299E2 /* ComposeMailViewController.swift */; };
+		163C621A1E1285A5005299E2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C62191E1285A5005299E2 /* RegistrationViewController.swift */; };
+		163C621C1E1285FE005299E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C621B1E1285FE005299E2 /* LoginViewController.swift */; };
 		165E19201E0017AB00B744D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E191F1E0017AB00B744D4 /* AppDelegate.swift */; };
-		165E19221E0017AB00B744D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E19211E0017AB00B744D4 /* ViewController.swift */; };
 		165E19251E0017AB00B744D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165E19231E0017AB00B744D4 /* Main.storyboard */; };
 		165E19271E0017AB00B744D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165E19261E0017AB00B744D4 /* Assets.xcassets */; };
 		165E192A1E0017AB00B744D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165E19281E0017AB00B744D4 /* LaunchScreen.storyboard */; };
@@ -41,9 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		163C62111E128276005299E2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		163C62131E1283D3005299E2 /* InboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
+		163C62151E1283F8005299E2 /* SentboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentboxTableViewController.swift; sourceTree = "<group>"; };
+		163C62171E1284F6005299E2 /* ComposeMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeMailViewController.swift; sourceTree = "<group>"; };
+		163C62191E1285A5005299E2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		163C621B1E1285FE005299E2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		165E191C1E0017AB00B744D4 /* InternMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165E191F1E0017AB00B744D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		165E19211E0017AB00B744D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		165E19241E0017AB00B744D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		165E19261E0017AB00B744D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		165E19291E0017AB00B744D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +109,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		163C62101E127B26005299E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163C621B1E1285FE005299E2 /* LoginViewController.swift */,
+				163C62111E128276005299E2 /* DetailViewController.swift */,
+				163C62131E1283D3005299E2 /* InboxTableViewController.swift */,
+				163C62151E1283F8005299E2 /* SentboxTableViewController.swift */,
+				163C62171E1284F6005299E2 /* ComposeMailViewController.swift */,
+				163C62191E1285A5005299E2 /* RegistrationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		165E19131E0017AB00B744D4 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +147,9 @@
 		165E191E1E0017AB00B744D4 /* InternMail */ = {
 			isa = PBXGroup;
 			children = (
+				163C62101E127B26005299E2 /* Controller */,
 				165E194D1E0017CE00B744D4 /* Model */,
 				165E19581E0027F700B744D4 /* Service */,
-				165E19211E0017AB00B744D4 /* ViewController.swift */,
 				165E191F1E0017AB00B744D4 /* AppDelegate.swift */,
 				165E19231E0017AB00B744D4 /* Main.storyboard */,
 				165E19261E0017AB00B744D4 /* Assets.xcassets */,
@@ -370,13 +393,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163C62121E128276005299E2 /* DetailViewController.swift in Sources */,
+				163C62161E1283F8005299E2 /* SentboxTableViewController.swift in Sources */,
+				163C62181E1284F6005299E2 /* ComposeMailViewController.swift in Sources */,
 				16D0B93A1E126A92000159D2 /* IMResponse.swift in Sources */,
+				163C621A1E1285A5005299E2 /* RegistrationViewController.swift in Sources */,
 				16D0B93E1E126BDF000159D2 /* Base Service.swift in Sources */,
-				165E19221E0017AB00B744D4 /* ViewController.swift in Sources */,
 				16D0B93C1E126B4B000159D2 /* IMBaseModel.swift in Sources */,
 				165E19201E0017AB00B744D4 /* AppDelegate.swift in Sources */,
+				163C62141E1283D3005299E2 /* InboxTableViewController.swift in Sources */,
 				16D0B9401E126C1E000159D2 /* User Service.swift in Sources */,
 				165E19511E0017DD00B744D4 /* IMUser.swift in Sources */,
+				163C621C1E1285FE005299E2 /* LoginViewController.swift in Sources */,
 				165E19501E0017DD00B744D4 /* IMMail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
