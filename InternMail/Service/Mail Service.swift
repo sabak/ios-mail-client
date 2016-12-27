@@ -19,10 +19,28 @@ extension MailService {
                           "username"    : username,
                           "password"    : pass]
         
-        loggedIn (parameters: params, complete: complete)
+        loggedInOrRegistered (parameters: params, complete: complete)
     }
     
-    func loggedIn (parameters: Parameters, complete: @escaping (IMResponse<[IMUser]>?)->Void){
+    func registerNewUser(username       : String,
+                         firstName      : String,
+                         lastName       : String,
+                         mobileNumber   : String,
+                         password       : String,
+                         completion     : @escaping (IMResponse<[IMUser]>?)->Void){
+        
+        let params = ["type"        : "register",
+                          "username"    : username,
+                          "password"    : password,
+                          "firstname"   : firstName,
+                          "lastname"    : lastName,
+                          "mobile"      : mobileNumber]
+        
+        loggedInOrRegistered(parameters: params, complete: completion)
+        
+    }
+    
+    func loggedInOrRegistered (parameters: Parameters, complete: @escaping (IMResponse<[IMUser]>?)->Void){
         self.parsePostData(parameters: parameters, url: "") { response in
             
             var serviceResponse = IMResponse<[IMUser]>()
@@ -48,4 +66,5 @@ extension MailService {
             complete(serviceResponse)
         }
     }
+
 }

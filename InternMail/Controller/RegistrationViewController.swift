@@ -10,6 +10,49 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var username:        UITextField!
+    @IBOutlet weak var firstName:       UITextField!
+    @IBOutlet weak var lastName:        UITextField!
+    @IBOutlet weak var password:        UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
+    @IBOutlet weak var mobileNumber:    UITextField!
+    
+    @IBAction func registerClicked(_ sender: UIButton) {
+        
+        weak var wSelf = self
+        
+        if (confirmPassword.text != password.text){
+            return
+        }
+
+        
+        MailService.sharedInstance.registerNewUser(username    : username.text!,
+                                                   firstName   : firstName.text!,
+                                                   lastName    : lastName.text!,
+                                                   mobileNumber : mobileNumber.text!,
+                                                   password    : password.text!)
+        { (response) -> Void in
+            if (response?.error) != nil {
+                if response?.error == "The username already exists!" {
+                    wSelf?.username.text = ""
+                }
+                
+            }else{
+                CurrentUser.sharedInstance.user = response?.result?[0]
+                print(CurrentUser.sharedInstance.user.description as Any)
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+        }
+    }
+    
+    func register (){
+        
+    }
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

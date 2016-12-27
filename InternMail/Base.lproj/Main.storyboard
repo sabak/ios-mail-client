@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMB-Ff-Eg2" userLabel="Password">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMB-Ff-Eg2" userLabel="Password">
                                 <rect key="frame" x="32" y="187" width="256" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -61,6 +61,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-Jp-5qZ">
                                 <rect key="frame" x="131.5" y="530" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerClicked:" destination="QZK-Fz-qEq" eventType="touchUpInside" id="OID-ln-pc5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,6 +90,14 @@
                             <constraint firstItem="Z8m-m7-Shu" firstAttribute="top" secondItem="cFJ-rb-DPw" secondAttribute="bottom" constant="8" id="yN3-hq-hxk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassword" destination="FMB-Ff-Eg2" id="T4R-xx-TK5"/>
+                        <outlet property="firstName" destination="cFJ-rb-DPw" id="Whq-va-Qya"/>
+                        <outlet property="lastName" destination="Z8m-m7-Shu" id="4RO-VK-y94"/>
+                        <outlet property="mobileNumber" destination="9aQ-7o-ZKO" id="LUT-QH-EDt"/>
+                        <outlet property="password" destination="RGc-m8-ySW" id="L57-qg-r7g"/>
+                        <outlet property="username" destination="DH2-e2-0q4" id="5NT-b5-e3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f7-nm-vfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,5 @@ import UIKit
 
 class IMResponse<T>: Error {
     var result : T?
-    var error : Error?
+    var error : String?
 }
