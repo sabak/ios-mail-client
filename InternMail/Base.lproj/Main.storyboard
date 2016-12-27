@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f7-nm-vfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-570"/>
+            <point key="canvasLocation" x="333" y="1031"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -133,6 +133,9 @@
                                             <constraint firstAttribute="width" constant="50" id="Exm-L7-qGe"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38B-9z-Glq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,22 +154,29 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-yg-bzc" userLabel="RegisterButton">
                                 <rect key="frame" x="131.5" y="530" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="QZK-Fz-qEq" kind="presentation" id="oxp-kK-Loy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BNB-yg-bzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ND-63-gc2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BNB-yg-bzc" secondAttribute="bottom" constant="8" id="CME-b4-cXS"/>
                             <constraint firstItem="dHS-xJ-Bb1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="LUx-V6-sZp"/>
+                            <constraint firstItem="BNB-yg-bzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Po2-TZ-AUe"/>
                             <constraint firstItem="dHS-xJ-Bb1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SBv-Ob-4ZW"/>
                             <constraint firstItem="dHS-xJ-Bb1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="oT6-aT-qxw"/>
-                            <constraint firstItem="dHS-xJ-Bb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvC-FB-ysX"/>
+                            <constraint firstItem="dHS-xJ-Bb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAm-bh-oMZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="Xau-D9-KEI" id="KCS-b1-ASs"/>
+                        <outlet property="username" destination="fMa-th-h3a" id="RJU-DT-KGe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="138.38028169014083"/>
+            <point key="canvasLocation" x="333" y="139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Sgh-Va-ODb">
