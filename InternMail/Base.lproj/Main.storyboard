@@ -282,7 +282,59 @@
                     <view key="view" contentMode="scaleToFill" id="Vcx-Qs-1n7" customClass="ComposeMail">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAX-Is-PHG">
+                                <rect key="frame" x="32" y="98" width="256" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Compse new Email" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x9o-qU-9Z5" userLabel="Compose New Email">
+                                <rect key="frame" x="32" y="28" width="256" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DOO-0G-mcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVN-bS-gD6">
+                                <rect key="frame" x="32.5" y="136" width="256" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-Fp-kxW" userLabel="Body">
+                                <rect key="frame" x="32.5" y="174" width="256" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0Kr-1g-fkz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYJ-Rt-Yxp">
+                                <rect key="frame" x="142" y="530" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RVN-bS-gD6" firstAttribute="centerX" secondItem="Vcx-Qs-1n7" secondAttribute="centerX" id="18j-1X-mNT"/>
+                            <constraint firstItem="RVN-bS-gD6" firstAttribute="top" secondItem="EAX-Is-PHG" secondAttribute="bottom" constant="8" id="1lj-AG-7Ao"/>
+                            <constraint firstItem="WiP-Fp-kxW" firstAttribute="centerX" secondItem="Vcx-Qs-1n7" secondAttribute="centerX" id="F8o-16-O3u"/>
+                            <constraint firstItem="EAX-Is-PHG" firstAttribute="top" secondItem="x9o-qU-9Z5" secondAttribute="bottom" constant="20" id="GnZ-lx-Ucg"/>
+                            <constraint firstItem="x9o-qU-9Z5" firstAttribute="centerX" secondItem="Vcx-Qs-1n7" secondAttribute="centerX" id="Tt5-zW-As5"/>
+                            <constraint firstItem="RVN-bS-gD6" firstAttribute="width" secondItem="Vcx-Qs-1n7" secondAttribute="width" multiplier="0.8" id="Vgi-9g-e48"/>
+                            <constraint firstItem="cYJ-Rt-Yxp" firstAttribute="centerX" secondItem="Vcx-Qs-1n7" secondAttribute="centerX" id="mPw-bJ-zOy"/>
+                            <constraint firstItem="EAX-Is-PHG" firstAttribute="centerX" secondItem="Vcx-Qs-1n7" secondAttribute="centerX" id="qn0-QJ-wgZ"/>
+                            <constraint firstItem="WiP-Fp-kxW" firstAttribute="width" secondItem="Vcx-Qs-1n7" secondAttribute="width" multiplier="0.8" id="s5R-hN-jsf"/>
+                            <constraint firstItem="x9o-qU-9Z5" firstAttribute="top" secondItem="Og9-zT-b98" secondAttribute="bottom" constant="8" id="sh2-BD-ARf"/>
+                            <constraint firstItem="x9o-qU-9Z5" firstAttribute="width" secondItem="Vcx-Qs-1n7" secondAttribute="width" multiplier="0.8" id="u4d-QJ-apo"/>
+                            <constraint firstItem="EAX-Is-PHG" firstAttribute="width" secondItem="Vcx-Qs-1n7" secondAttribute="width" multiplier="0.8" id="uu2-k7-iFO"/>
+                            <constraint firstItem="UFN-bT-nHq" firstAttribute="top" secondItem="cYJ-Rt-Yxp" secondAttribute="bottom" constant="8" id="vzh-T0-oIw"/>
+                            <constraint firstItem="WiP-Fp-kxW" firstAttribute="top" secondItem="RVN-bS-gD6" secondAttribute="bottom" constant="8" id="w2s-NC-Lfd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auo-hg-jFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
