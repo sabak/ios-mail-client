@@ -10,10 +10,22 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
+    var email: IMMail?
+    
+    @IBOutlet weak var subject: UITextView!
+    @IBOutlet weak var sender:  UITextView!
+    @IBOutlet weak var body:    UITextView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        body.text       = email?.text
+        subject.text    = email?.subject
+        sender.text     = email?.from.username
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {

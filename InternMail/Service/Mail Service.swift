@@ -29,7 +29,7 @@ extension MailService {
                          password       : String,
                          completion     : @escaping (IMResponse<[IMUser]>?)->Void){
         
-        let params = ["type"        : "register",
+        let params = ["type"            : "register",
                           "username"    : username,
                           "password"    : password,
                           "firstname"   : firstName,
@@ -46,12 +46,12 @@ extension MailService {
             var serviceResponse = IMResponse<[IMUser]>()
             var result = [IMUser]()
             
-            if let res = response.result as? [String : AnyObject] {
+            if let responseResult = response.result as? [String : AnyObject] {
                 
-                let success = res["success"] as? Bool
+                let success = responseResult["success"] as? Bool
                 
                 if success!{
-                    if let objects = res["data"] as? [[String:AnyObject]] {
+                    if let objects = responseResult["data"] as? [[String:AnyObject]] {
                         for item in objects {
                             let selectObject = IMUser(properties: item)
                             result.append(selectObject)
@@ -59,12 +59,45 @@ extension MailService {
                     }
                     serviceResponse.result = result
                 }else {
-                    serviceResponse.error = res["errorMessage"] as? String as! Error?
+                    serviceResponse.error = responseResult["errorMessage"] as? String
                 }
             }
             
             complete(serviceResponse)
         }
     }
-
+    
+    func loadInboxItems(complete: @escaping (IMResponse<[IMMail]>?)->Void){
+        let params = ["type"        : "data",
+                      "emailType"   : "sent"]
+        loadItems(parameters: params, complete: complete)
+    }
+    
+    func loadSentItems(complete: @escaping (IMResponse<[IMMail]>?)->Void){
+        let params = ["type"        : "data",
+                      "emailType"   : "inbox"]
+        loadItems(parameters: params, complete: complete)
+    }
+    
+    
+    func loadItems(parameters: Parameters?, complete: @escaping (IMResponse<[IMMail]>?)->Void){
+        self.parsePostData(parameters: parameters, url: "") { response in
+            
+            var serviceResponse = IMResponse<[IMMail]>()
+            var result = [IMMail]()
+            
+            if let responseResult = response.result as? [String : AnyObject] {
+                if let objects = responseResult["data"] as? [[String:AnyObject]] {
+                    for item in objects {
+                        let selectObject = IMMail(properties: item)
+                        result.append(selectObject)
+                    }
+                }
+            }
+            
+            serviceResponse.result = result
+            complete(serviceResponse)
+        
+        }
+    }
 }

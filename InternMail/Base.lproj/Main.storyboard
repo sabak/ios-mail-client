@@ -218,12 +218,58 @@
                     <view key="view" contentMode="scaleToFill" id="3Hh-7F-GYf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Subject" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D2d-JN-AJG" userLabel="Subject">
+                                <rect key="frame" x="32" y="84" width="256" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Occ-Uo-Mfv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sender" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-TA-lle">
+                                <rect key="frame" x="32" y="142" width="256" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qtA-gB-lxw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMo-Qp-ek4">
+                                <rect key="frame" x="32" y="208" width="256" height="301"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LMo-Qp-ek4" firstAttribute="centerX" secondItem="3Hh-7F-GYf" secondAttribute="centerX" id="6gQ-ja-zjV"/>
+                            <constraint firstItem="Yle-Gp-Tli" firstAttribute="top" secondItem="LMo-Qp-ek4" secondAttribute="bottom" constant="10" id="G35-fu-2Qf"/>
+                            <constraint firstItem="LMo-Qp-ek4" firstAttribute="top" secondItem="DLL-TA-lle" secondAttribute="bottom" constant="16" id="KxY-EG-XPX"/>
+                            <constraint firstItem="D2d-JN-AJG" firstAttribute="centerX" secondItem="3Hh-7F-GYf" secondAttribute="centerX" id="Wkq-ty-OVF"/>
+                            <constraint firstItem="DLL-TA-lle" firstAttribute="centerX" secondItem="3Hh-7F-GYf" secondAttribute="centerX" id="ezH-jJ-Ua8"/>
+                            <constraint firstItem="D2d-JN-AJG" firstAttribute="width" secondItem="3Hh-7F-GYf" secondAttribute="width" multiplier="0.8" id="fkL-qU-fep"/>
+                            <constraint firstItem="LMo-Qp-ek4" firstAttribute="width" secondItem="3Hh-7F-GYf" secondAttribute="width" multiplier="0.8" id="jS2-nz-SBc"/>
+                            <constraint firstItem="DLL-TA-lle" firstAttribute="width" secondItem="3Hh-7F-GYf" secondAttribute="width" multiplier="0.8" id="jd8-v2-D1K"/>
+                            <constraint firstItem="D2d-JN-AJG" firstAttribute="top" secondItem="rsK-b9-BC3" secondAttribute="bottom" constant="20" id="pl1-0i-QAY"/>
+                            <constraint firstItem="DLL-TA-lle" firstAttribute="top" secondItem="D2d-JN-AJG" secondAttribute="bottom" constant="8" id="q78-9c-EK4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Sender" destination="DLL-TA-lle" id="lAO-uz-535"/>
+                        <outlet property="Subject" destination="D2d-JN-AJG" id="sAw-8L-QTa"/>
+                        <outlet property="body" destination="LMo-Qp-ek4" id="fWi-R9-HLQ"/>
+                        <outlet property="sender" destination="DLL-TA-lle" id="Fr3-mU-86h"/>
+                        <outlet property="subject" destination="D2d-JN-AJG" id="cUZ-BG-tKQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mU1-NO-wyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3927" y="139"/>
+            <point key="canvasLocation" x="3926.25" y="138.38028169014083"/>
         </scene>
         <!--Compose Mail View Controller-->
         <scene sceneID="ilb-vH-C2X">
@@ -276,6 +322,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qyn-ga-7rh" kind="show" identifier="detail_view" id="1Yg-en-aIz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -322,6 +371,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qyn-ga-7rh" kind="show" identifier="detail_view" id="Gv4-RX-oB0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -336,4 +388,7 @@
             <point key="canvasLocation" x="2933" y="-329"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gv4-RX-oB0"/>
+    </inferredMetricsTieBreakers>
 </document>

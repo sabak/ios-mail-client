@@ -11,10 +11,10 @@ import UIKit
 class IMMail: IMBaseModel {
 
     
-    var from : IMUser!
-    var to : IMUser!
-    var subject : String!
-    var text : String!
+    var from    :   IMUser!
+    var to      :   IMUser!
+    var subject :   String!
+    var text    :   String!
     
     override var description: String{
         
